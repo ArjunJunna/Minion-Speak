@@ -4,10 +4,10 @@ let OutputDiv = document.querySelector('#txt-output');
 
 let serverURL = 'https://api.funtranslations.com/translate/minion.json';
 
-const getTranslationURL=(input)=>serverURL + '?' + 'text=' + input;
+const getTranslationURL=input=>`${serverURL}?text=${input}`;
 
 
-const errorHandler=(error)=>{
+const errorHandler=error=>{
   console.log('error occured', error);
   alert('Server down!! Try later');
 }
